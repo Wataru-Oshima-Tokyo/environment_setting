@@ -1,24 +1,43 @@
 echo 'lcm-server'
+
 cd ~/
+
 git clone https://github.com/TechShare-inc/slamrplidar
+
 cd slamrplidar/slam_planner_sdk/Thirdparty/
+
 sudo tar -xvf lcm-1.4.0.tar.gz
+
 mv lcm-1.4.0 ~/
+
 cd ~/
+
 sudo rm -r slamrplidar
+
 cd ~/lcm-1.4.0/
+
 mkdir build && cd build
+
 cmake ..
+
 make -j4
+
 sudo make install
 
 echo 'unitree_legged_sdk'
+
 cd ~/
+
 git clone https://github.com/Wataru-Oshima-Tokyo/unitree_legged_sdk
+
 cd unitree_legged_sdk
+
 mkdir build && cd build
+
 cmake ..
-make -j4 
+
+make -j4
+
 cd ~/
 
 
