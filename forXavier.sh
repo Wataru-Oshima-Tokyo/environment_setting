@@ -27,13 +27,13 @@ sudo add-apt-repository "deb https://librealsense.intel.com/Debian/apt-repo bion
 sudo apt install librealsense2-utils
 sudo apt install librealsense2-dev
 
-echo 'source /usr/share/gazebo/setup.sh
-export ROS_PACKAGE_PATH=~/catkin_ws:${ROS_PACKAGE_PATH}
-export GAZEBO_PLUGIN_PATH=~/catkin_ws/devel/lib:${GAZEBO_PLUGIN_PATH}
-export LD_LIBRARY_PATH=~/catkin_ws/devel/lib:${LD_LIBRARY_PATH}
-# 3_1, 3_2
-export UNITREE_SDK_VERSION=3_2
-export UNITREE_LEGGED_SDK_PATH=~/unitree_legged_sdk
-export ALIENGO_SDK_PATH=~/aliengo_sdk
-# amd64, arm32, arm64
-export UNITREE_PLATFORM="arm64"' >> ~/.bashrc
+echo 'source /usr/share/gazebo/setup.sh' >> ~/.bashrc
+echo 'export ROS_PACKAGE_PATH=~/catkin_ws:${ROS_PACKAGE_PATH}' >> ~/.bashrc
+echo 'export GAZEBO_PLUGIN_PATH=~/catkin_ws/devel/lib:${GAZEBO_PLUGIN_PATH}' >> ~/.bashrc
+echo 'export LD_LIBRARY_PATH=~/catkin_ws/devel/lib:${LD_LIBRARY_PATH}' >> ~/.bashrc
+echo '# 3_1, 3_2' >> ~/.bashrc
+echo 'export UNITREE_SDK_VERSION=3_2' >> ~/.bashrc
+echo 'export UNITREE_LEGGED_SDK_PATH=~/unitree_legged_sdk' >> ~/.bashrc
+echo 'export ALIENGO_SDK_PATH=~/aliengo_sdk' >> ~/.bashrc
+echo '# amd64, arm32, arm64' >> ~/.bashrc
+echo 'export UNITREE_PLATFORM="arm64" ' >> ~/.bashrc
