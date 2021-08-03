@@ -23,8 +23,7 @@ make -j4
 cd ~/
 sudo apt-key adv --keyserver keys.gnupg.net --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE || sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE
 sudo add-apt-repository "deb https://librealsense.intel.com/Debian/apt-repo bionic main" -u
-sudo apt install librealsense2-utils
-sudo apt install librealsense2-dev
+sudo apt install librealsense2-utils  librealsense2-dev -y
 
 echo 'source /usr/share/gazebo/setup.sh' >> ~/.bashrc
 echo 'export ROS_PACKAGE_PATH=~/catkin_ws:${ROS_PACKAGE_PATH}' >> ~/.bashrc
@@ -36,3 +35,4 @@ echo 'export UNITREE_LEGGED_SDK_PATH=~/unitree_legged_sdk' >> ~/.bashrc
 echo 'export ALIENGO_SDK_PATH=~/aliengo_sdk' >> ~/.bashrc
 echo '# amd64, arm32, arm64' >> ~/.bashrc
 echo 'export UNITREE_PLATFORM="arm64" ' >> ~/.bashrc
+source ~/.bashrc
